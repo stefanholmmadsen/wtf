@@ -1,0 +1,26 @@
+sudo: required
+
+language: generic
+ 
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: false
+      addons:
+        apt:
+          sources:
+            - sourceline: "deb [arch=amd64] https://packages.microsoft.com/ubuntu/14.04/prod trusty main"
+              key_url: "https://packages.microsoft.com/keys/microsoft.asc"
+          packages:
+            - powershell
+    fast_finish: true
+
+services:
+  - docker
+
+  
+install:
+  
+script:
+ - docker version

@@ -1,0 +1,13 @@
+ Volume in drive C has no label.
+ Volume Serial Number is A25E-4918
+
+ Directory of c:\Dev\git\test
+
+18-05-2018  22:06    <DIR>          .
+18-05-2018  22:06    <DIR>          ..
+18-05-2018  22:02               492 .travis.yml
+18-05-2018  21:50                17 dockerfile
+18-05-2018  22:06                 0 file.txt
+18-05-2018  21:03                11 README.md
+               4 File(s)            520 bytes
+               2 Dir(s)  151.705.096.192 bytes free
