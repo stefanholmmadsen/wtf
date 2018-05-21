@@ -14,3 +14,4 @@ services:
 script:
  - docker version
  - pwsh -Command Invoke-Command -ScriptBlock {\(Get-Variable PSVersionTable\).Value}
+ - echo "hello iskra"
