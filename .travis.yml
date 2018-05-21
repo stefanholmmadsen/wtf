@@ -13,4 +13,4 @@ services:
   
 script:
  - docker version
- - pwsh -Command Invoke-Command -ScriptBlock {\(Get-Variable PSVersion\).Value}
+ - pwsh -Command Invoke-Command -ScriptBlock {\(Get-Variable PSVersionTable\).Value}
