@@ -13,4 +13,4 @@ services:
   
 script:
  - docker version
- - pswh $PSVersionTable.PSVersion
+ - pwsh $PSVersionTable.PSVersion
