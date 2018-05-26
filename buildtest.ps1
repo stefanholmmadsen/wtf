@@ -33,7 +33,7 @@ else{
 
 if($env:TRAVIS_PULL_REQUEST){
 	Write-output "this is a pull request, so i'm going to build"
-}else if($env:TRAVIS_EVENT_TYPE -eq "push"){
+}elseif($env:TRAVIS_EVENT_TYPE -eq "push"){
 	if($isMergeCommitWith2parents){
 		Write-output "this is a merge confirm request, so i'm not going to build"
 	}elseif ($isMergeCommitWith1parent){
