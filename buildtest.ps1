@@ -14,7 +14,7 @@ git log -1 --pretty=oneline
 
 #this would be reported on merge after pull requests
 #ff19b4328d6fa1164445d9516f98a801c336a2cb (HEAD, origin/master, origin/HEAD, master) Merge pull request #4 from stefanholmmadsen/branchtest
-$a = (git log -l --pretty=oneline | first bit)
+#$a = (git log -l --pretty=oneline | first bit)
 $isMergeCommitWith2parents = (git rev-list --all --min-parents=2 | sls $env:TRAVIS_COMMIT | measure).count  # == 1 if its a mergecommit, == 0 if not
 if ($isMergeCommitWith2parents){
 	Write-output "this is a merge commit with 2 parents"
@@ -31,7 +31,7 @@ else{
 	Write-output "this is not a merge commit with 1 parent"
 }
 
-if($env:TRAVIS_PULL_REQUEST){
+if($env:TRAVIS_PULL_REQUEST -ne "false"){
 	Write-output "this is a pull request, so i'm going to build"
 }elseif($env:TRAVIS_EVENT_TYPE -eq "push"){
 	if($isMergeCommitWith2parents){
