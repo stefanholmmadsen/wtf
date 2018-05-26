@@ -1,7 +1,9 @@
 Write-output "branch: ${env:TRAVIS_BRANCH}"
 Write-output "pull request: ${env:TRAVIS_PULL_REQUEST}"
+Write-output "pull request SHA: ${env:TRAVIS_PULL_REQUEST_SHA}"
 Write-output "event type: ${env:TRAVIS_EVENT_TYPE}"
 Write-output "commit:  ${env:TRAVIS_COMMIT}"
+
 
 Write-output "testing current event"
 
@@ -33,6 +35,8 @@ if ($isMergeCommitWith1parent){
 
 if($env:TRAVIS_PULL_REQUEST -ne "false"){
 	Write-output "this is a pull request, so i'm going to build"
+	Write-output "current SHA is a PR and temporary"
+	
 }elseif($env:TRAVIS_EVENT_TYPE -eq "push"){
 	if($isMergeCommitWith2parents){
 		Write-output "this is a merge confirm request, so i'm not going to build"
