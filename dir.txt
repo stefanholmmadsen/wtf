@@ -6,8 +6,8 @@
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 -a----       26-05-2018     14:00            358 .travis.yml
--a----       26-05-2018     15:54           2019 buildtest.ps1
-             26-05-2018     15:56              0 dir.txt
+-a----       26-05-2018     16:26           2021 buildtest.ps1
+             26-05-2018     16:44              0 dir.txt
 -a----       18-05-2018     21:50             17 dockerfile
 -a----       26-05-2018     13:46            473 file.txt
 -a----       26-05-2018     14:11            562 filfil
