@@ -38,7 +38,7 @@ if($env:TRAVIS_PULL_REQUEST){
 		Write-output "this is a merge confirm request, so i'm not going to build"
 	}elseif ($isMergeCommitWith1parent){
 		Write-output "this is a single parent commit ? merge?"
-	]
+	}
 }
 
 
