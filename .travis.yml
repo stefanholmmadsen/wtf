@@ -7,11 +7,6 @@ before_install:
  - curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft.list
  - sudo apt-get update
  - sudo apt-get install -y powershell
-
-services:
-  - docker
   
 script:
- - docker version
- - pwsh -Command Invoke-Command -ScriptBlock {\(Get-Variable PSVersionTable\).Value}
- - echo "hello iskra"
+ - pwsh ./buildtest.ps1 
