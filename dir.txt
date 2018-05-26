@@ -1,16 +1,16 @@
- Volume in drive C has no label.
- Volume Serial Number is A25E-4918
 
- Directory of c:\Dev\git\wtf
 
-26-05-2018  14:11    <DIR>          .
-26-05-2018  14:11    <DIR>          ..
-26-05-2018  14:00               358 .travis.yml
-26-05-2018  14:16               269 buildtest.ps1
-26-05-2018  14:18                 0 dir.txt
-18-05-2018  21:50                17 dockerfile
-26-05-2018  13:46               473 file.txt
-26-05-2018  14:11               562 filfil
-18-05-2018  21:03                11 README.md
-               7 File(s)          1.690 bytes
-               2 Dir(s)  142.347.509.760 bytes free
+    Directory: C:\dev\git\wtf
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       26-05-2018     14:00            358 .travis.yml
+-a----       26-05-2018     14:59           1754 buildtest.ps1
+             26-05-2018     15:09              0 dir.txt
+-a----       18-05-2018     21:50             17 dockerfile
+-a----       26-05-2018     13:46            473 file.txt
+-a----       26-05-2018     14:11            562 filfil
+-a----       18-05-2018     21:03             11 README.md
+
+
