@@ -19,17 +19,17 @@ $isMergeCommitWith2parents = (git rev-list --all --min-parents=2 | sls $env:TRAV
 if ($isMergeCommitWith2parents){
 	Write-output "this is a merge commit with 2 parents"
 }
-else{
-	Write-output "this is not a merge commit with 2 parents"
-}
+#else{
+#	Write-output "this is not a merge commit with 2 parents"
+#}
 
 $isMergeCommitWith1parent = (git rev-list --all --min-parents=1 | sls $env:TRAVIS_COMMIT | measure).count  # == 1 if its a mergecommit, == 0 if not
 if ($isMergeCommitWith1parent){
 	Write-output "this is a merge commit with 1 parent"
 }
-else{
-	Write-output "this is not a merge commit with 1 parent"
-}
+#else{
+#	Write-output "this is not a merge commit with 1 parent"
+#}
 
 if($env:TRAVIS_PULL_REQUEST -ne "false"){
 	Write-output "this is a pull request, so i'm going to build"
@@ -37,7 +37,12 @@ if($env:TRAVIS_PULL_REQUEST -ne "false"){
 	if($isMergeCommitWith2parents){
 		Write-output "this is a merge confirm request, so i'm not going to build"
 	}elseif ($isMergeCommitWith1parent){
-		Write-output "this is a single parent commit ? merge?"
+		if ($env:TRAVIS_BRANCH -eq "master"){
+			Write-output "this is a push event to master"			
+		}elseif ($env:TRAVIS_BRANCH -ne ""){
+			Write-output "this is a push event to branch"			
+		}
+		
 	}
 }
 
