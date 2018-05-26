@@ -1,6 +1,3 @@
-install-module -name powershellforgithub -force
-$global:gitHubApiToken="75c89f1681b1665355d4dd8ab61a0232f08d80d4"
-
 Write-output "branch: ${env:TRAVIS_BRANCH}"
 Write-output "pull request: ${env:TRAVIS_PULL_REQUEST}"
 Write-output "pull request SHA: ${env:TRAVIS_PULL_REQUEST_SHA}"
