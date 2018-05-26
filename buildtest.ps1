@@ -1,6 +1,6 @@
-Write-output $TRAVIS_BRANCH
-Write-output $TRAVIS_PULL_REQUEST
-Write-output $TRAVIS_EVENT_TYPE
+Write-output $env:TRAVIS_BRANCH
+Write-output $env:TRAVIS_PULL_REQUEST
+Write-output $env:TRAVIS_EVENT_TYPE
 
 Write-output "testing current event"
 
